@@ -1,10 +1,10 @@
-package com.dingjianjun;
+package com.dingjianjun.productservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EurekaServerApplicationTests {
+class ProductServiceApplicationTests {
 
     @Test
     void contextLoads() {
