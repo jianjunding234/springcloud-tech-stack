@@ -6,7 +6,6 @@ import com.dingjianjun.orderservice.service.OrderService;
 import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
 
 /**
  * @author : Jianjun.Ding
