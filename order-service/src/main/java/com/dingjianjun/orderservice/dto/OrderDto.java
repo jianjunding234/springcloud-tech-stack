@@ -1,31 +1,34 @@
-package com.dingjianjun.productservice.entity;
+package com.dingjianjun.orderservice.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
+/**
+ * @author : Jianjun.Ding
+ * @description:
+ * @date 2020/5/24
+ */
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductInfo implements Serializable {
-    private static final long serialVersionUID = -6982984682711444109L;
+public class OrderDto {
     private Long id;
 
-    private String productNo;
+    private String orderNo;
 
-    private String productName;
+    private Long userId;
 
-    private BigDecimal price;
+    private BigDecimal money;
 
     private Integer status;
 
-    private Integer stock;
+    private String payNo;
 
     private Date gmtCreate;
 

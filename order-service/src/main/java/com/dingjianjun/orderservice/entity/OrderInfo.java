@@ -1,4 +1,4 @@
-package com.dingjianjun.productservice.entity;
+package com.dingjianjun.orderservice.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,19 +13,19 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductInfo implements Serializable {
-    private static final long serialVersionUID = -6982984682711444109L;
+public class OrderInfo implements Serializable {
+    private static final long serialVersionUID = 1577917829183551229L;
     private Long id;
 
-    private String productNo;
+    private String orderNo;
 
-    private String productName;
+    private Long userId;
 
-    private BigDecimal price;
+    private BigDecimal money;
 
     private Integer status;
 
-    private Integer stock;
+    private String payNo;
 
     private Date gmtCreate;
 
