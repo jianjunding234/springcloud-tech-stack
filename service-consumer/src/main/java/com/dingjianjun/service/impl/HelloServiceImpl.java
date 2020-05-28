@@ -2,6 +2,7 @@ package com.dingjianjun.service.impl;
 
 import com.dingjianjun.service.HelloService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,7 +20,10 @@ public class HelloServiceImpl implements HelloService {
     private RestTemplate restTemplate;
 
     @Override
-    @HystrixCommand(fallbackMethod = "hello")
+    @HystrixCommand(fallbackMethod = "hello", threadPoolKey = "threadpool-fxz", threadPoolProperties = {
+            @HystrixProperty(name = "coreSize", value = "10")
+
+    })
     public String getHi(String name) {
         String url = "http://service-provider/hi";
         String responseStr = restTemplate.getForObject(url, String.class);
